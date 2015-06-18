@@ -15,6 +15,7 @@
             <string>HelveticaNeue-Thin</string>
             <string>HelveticaNeue-Thin</string>
             <string>HelveticaNeue-Thin</string>
+            <string>HelveticaNeue-Thin</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -79,7 +80,7 @@
                                     <constraint firstAttribute="height" constant="45" id="T9p-WU-3M0"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0yi-f9-KSU">
@@ -89,7 +90,7 @@
                                     <constraint firstAttribute="height" constant="45" id="tft-bg-tZz"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="31"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last seen: 2 seconds ago" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZLd-Iw-cMU">
@@ -99,7 +100,7 @@
                                     <constraint firstAttribute="height" constant="21" id="tE5-bV-E4S"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature: 22 degrees" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ix7-u5-dzy">
@@ -109,7 +110,7 @@
                                     <constraint firstAttribute="height" constant="21" id="hKd-1f-MqW"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="6bs-AU-z9D">
@@ -133,7 +134,7 @@
                                     <constraint firstAttribute="height" constant="21" id="j5K-Cd-gE2"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Right LED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ygu-Pl-kTp">
@@ -143,7 +144,7 @@
                                     <constraint firstAttribute="height" constant="21" id="X3V-lW-WgC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Uptime: nothing" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KCP-Ki-yvx">
@@ -153,7 +154,7 @@
                                     <constraint firstAttribute="height" constant="21" id="KeW-I5-hFk"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hss-9b-Ert">
@@ -171,7 +172,14 @@
                                     <constraint firstAttribute="height" constant="21" id="b0v-fG-noQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtO-kC-red">
+                                <rect key="frame" x="254" y="571" width="92" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="15"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -188,10 +196,13 @@
                             <constraint firstItem="ZLd-Iw-cMU" firstAttribute="trailing" secondItem="Ix7-u5-dzy" secondAttribute="trailing" id="6iF-7E-dRD"/>
                             <constraint firstAttribute="bottom" secondItem="oLb-La-rIf" secondAttribute="bottom" constant="20" symbolic="YES" id="8qQ-A5-NC4"/>
                             <constraint firstItem="Ix7-u5-dzy" firstAttribute="leading" secondItem="ZLd-Iw-cMU" secondAttribute="leading" id="BX7-YE-2BG"/>
+                            <constraint firstItem="wtO-kC-red" firstAttribute="top" secondItem="Lpg-Th-cB7" secondAttribute="bottom" constant="10" id="CPs-84-GHy"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="wtO-kC-red" secondAttribute="bottom" constant="8" symbolic="YES" id="ElG-Yx-hdc"/>
                             <constraint firstItem="hHf-NB-mOJ" firstAttribute="trailing" secondItem="KCP-Ki-yvx" secondAttribute="trailing" id="Hse-7t-OYu"/>
                             <constraint firstItem="Shx-Vg-CJQ" firstAttribute="trailing" secondItem="VwA-gN-xo9" secondAttribute="trailing" id="KT0-Bh-PKk"/>
                             <constraint firstItem="u70-nf-9L2" firstAttribute="centerX" secondItem="oLb-La-rIf" secondAttribute="centerX" id="LXS-IA-cYI"/>
                             <constraint firstItem="VwA-gN-xo9" firstAttribute="leading" secondItem="jGT-aD-ZS5" secondAttribute="trailing" constant="29" id="MGW-B4-8i6"/>
+                            <constraint firstItem="wtO-kC-red" firstAttribute="trailing" secondItem="Hss-9b-Ert" secondAttribute="trailing" id="MS3-eZ-wYQ"/>
                             <constraint firstItem="Lpg-Th-cB7" firstAttribute="top" secondItem="jGT-aD-ZS5" secondAttribute="bottom" constant="35" id="Qeu-la-0B0"/>
                             <constraint firstItem="jGT-aD-ZS5" firstAttribute="leading" secondItem="98c-W0-nJn" secondAttribute="trailing" constant="32" id="SBh-Tu-Rnf"/>
                             <constraint firstItem="ZLd-Iw-cMU" firstAttribute="top" secondItem="0yi-f9-KSU" secondAttribute="bottom" constant="8" symbolic="YES" id="U5t-IV-mJC"/>
@@ -203,6 +214,7 @@
                             <constraint firstItem="jGT-aD-ZS5" firstAttribute="baseline" secondItem="98c-W0-nJn" secondAttribute="baseline" id="XLv-ED-4KZ"/>
                             <constraint firstItem="98c-W0-nJn" firstAttribute="leading" secondItem="Shx-Vg-CJQ" secondAttribute="leading" id="Xkf-1j-FWn"/>
                             <constraint firstItem="oLb-La-rIf" firstAttribute="top" secondItem="u70-nf-9L2" secondAttribute="bottom" constant="8" symbolic="YES" id="Y7g-yc-8lF"/>
+                            <constraint firstItem="wtO-kC-red" firstAttribute="leading" secondItem="Hss-9b-Ert" secondAttribute="leading" id="Z3h-wQ-jWW"/>
                             <constraint firstItem="6bs-AU-z9D" firstAttribute="centerX" secondItem="Ygu-Pl-kTp" secondAttribute="centerX" id="Zqh-th-M89"/>
                             <constraint firstItem="6bs-AU-z9D" firstAttribute="top" secondItem="Ygu-Pl-kTp" secondAttribute="bottom" constant="8" id="aCs-ZY-lvK"/>
                             <constraint firstItem="Ix7-u5-dzy" firstAttribute="top" secondItem="ZLd-Iw-cMU" secondAttribute="bottom" constant="8" symbolic="YES" id="e4Y-Mz-8F8"/>
@@ -224,6 +236,7 @@
                         <outlet property="leftLEDSwitch" destination="oLb-La-rIf" id="kHf-cC-hEv"/>
                         <outlet property="lightLabel" destination="hHf-NB-mOJ" id="FmD-MV-aj5"/>
                         <outlet property="rightLEDSwitch" destination="6bs-AU-z9D" id="DGB-J9-ljR"/>
+                        <outlet property="statusLabel" destination="wtO-kC-red" id="eRd-Ey-Vte"/>
                         <outlet property="temperatureLabel" destination="Ix7-u5-dzy" id="G5V-O6-wEM"/>
                         <outlet property="uptimeLabel" destination="KCP-Ki-yvx" id="kto-Zl-5jp"/>
                     </connections>

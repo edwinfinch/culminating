@@ -11,7 +11,7 @@
 @interface ViewController : UIViewController
 
 @property IBOutlet UIButton *button;
-@property IBOutlet UILabel *lastSeenLabel, *temperatureLabel, *lightLabel, *uptimeLabel;
+@property IBOutlet UILabel *lastSeenLabel, *temperatureLabel, *lightLabel, *uptimeLabel, *statusLabel;
 @property IBOutlet UISwitch *leftLEDSwitch, *rightLEDSwitch;
 
 @end

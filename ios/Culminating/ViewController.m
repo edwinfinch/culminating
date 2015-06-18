@@ -16,8 +16,19 @@
 
 @implementation ViewController
 
+- (void)displayError:(NSString*)string {
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Connection Error"
+                                                    message:string
+                                                   delegate:nil
+                                          cancelButtonTitle:@"Alright"
+                                          otherButtonTitles:nil];
+    [alert show];
+    self.statusLabel.text = string;
+}
+
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error {
     NSLog(@"Error %@", [error localizedDescription]);
+    [self displayError:[error localizedDescription]];
 }
 
 - (void)getNewData {
@@ -28,17 +39,26 @@
     NSError *error = [[NSError alloc]init];
     NSDictionary *jsonResult = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:&error];
     NSLog(@"Result of %@.", jsonResult);
+    if([jsonResult objectForKey:@"error"]){
+        [self displayError:[jsonResult objectForKey:@"error"]];
+        return;
+    }
     if(connection == self.getConnection){
         self.lastSeenLabel.text = [NSString stringWithFormat:@"Last seen: %@", [jsonResult objectForKey:@"last_seen"]];
         self.temperatureLabel.text = [NSString stringWithFormat:@"Temperature: %@", [jsonResult objectForKey:@"temperature"]];
         self.lightLabel.text = [NSString stringWithFormat:@"Light: %@", [jsonResult objectForKey:@"light"]];
-        self.uptimeLabel.text = [NSString stringWithFormat:@"Uptime: %@", @"a long time"];
+        self.uptimeLabel.text = [NSString stringWithFormat:@"Uptime: %@", [NSString stringWithFormat:@"%@ seconds", [jsonResult objectForKey:@"uptime"]]];
+        NSNumber *leftBoolean = (NSNumber*)[jsonResult objectForKey:@"left_light"];
+        NSNumber *rightBoolean = (NSNumber*)[jsonResult objectForKey:@"right_light"];
+        self.rightLEDSwitch.on = [rightBoolean boolValue];
+        self.leftLEDSwitch.on = [leftBoolean boolValue];
         [NSTimer scheduledTimerWithTimeInterval:0.5
                                          target:self
                                        selector:@selector(getNewData)
                                        userInfo:nil
                                         repeats:NO];
     }
+    self.statusLabel.text = @"Success.";
 }
 
 - (void)connectionDidFinishLoading:(NSURLConnection*)connection{
@@ -62,6 +82,11 @@
     
     self.postConnection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
     [self.postConnection start];
+    
+    if([command isEqualToString:@"LED_CONTROL"]){
+        [self refreshButtonPressed:nil];
+    }
+    self.statusLabel.text = @"Connecting.";
 }
 
 - (void)sendGetRequest:(NSString*)url {
@@ -80,6 +105,7 @@
 }
 
 - (void)updateLights{
+    [self.getConnection cancel];
     int value = (self.leftLEDSwitch.on && self.rightLEDSwitch.on) ? 0 : (self.leftLEDSwitch.on && !self.rightLEDSwitch.on) ? 11 : (!self.leftLEDSwitch.on && self.rightLEDSwitch.on) ? 12 : 1;
     [self sendPostRequest:@"LED_CONTROL" :[NSString stringWithFormat:@"%d", value]];
 }
@@ -111,6 +137,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    [self refreshButtonPressed:nil];
 }
 
 - (void)didReceiveMemoryWarning {
