@@ -8,7 +8,10 @@
 #define PIEZO A5
 
 Servo rightServo, leftServo;
-int temperature = 0, photocell = 0, runs = 0;
+int temperature = 0, photocell = 0;
+unsigned long uptime = 0;
+unsigned long initialBootTime = 0;
+bool leftLightOn = true, rightLightOn = true;
 
 int move(String command){
     analogWrite(PIEZO, 120);
@@ -48,24 +51,26 @@ int led_control(String command){
     analogWrite(PIEZO, 120);
     switch(command.toInt()){
         case 0:
-            digitalWrite(LEFT_LED, 1);
-            digitalWrite(RIGHT_LED, 1);
+            leftLightOn = true;
+            rightLightOn = true;
             break;
         case 1:
-            digitalWrite(LEFT_LED, 0);
-            digitalWrite(RIGHT_LED, 0);
+            leftLightOn = false;
+            rightLightOn = false;
             break;
         case 11:
-            digitalWrite(LEFT_LED, 1);
-            digitalWrite(RIGHT_LED, 0);
+            leftLightOn = true;
+            rightLightOn = false;
             break;
         case 12:
-            digitalWrite(LEFT_LED, 0);
-            digitalWrite(RIGHT_LED, 1);
+            leftLightOn = false;
+            rightLightOn = true;
             break;
         default:
             return 400;
     }
+    digitalWrite(LEFT_LED, leftLightOn);
+    digitalWrite(RIGHT_LED, rightLightOn);
     return 200;
 }
 
@@ -78,7 +83,9 @@ void setup() {
   
   Spark.variable("temperature", &temperature, INT);
   Spark.variable("light", &photocell, INT);
-  Spark.variable("runs", &runs, INT);
+  Spark.variable("uptime", &uptime, INT);
+  Spark.variable("left_light", &leftLightOn, BOOLEAN);
+  Spark.variable("right_light", &rightLightOn, BOOLEAN);
 
   pinMode(LED_CS, OUTPUT);
   pinMode(THERMISTOR_CS, INPUT);
@@ -92,12 +99,14 @@ void setup() {
     digitalWrite(LEFT_LED, (i % 2 == 0));
     delay(200-(i*10));
   }
+  initialBootTime = millis();
 }
 
 
 void loop() { 
-  runs++;
-  delay(100);
+  unsigned long currentTime = millis();
+  delay(50);
   temperature = analogRead(THERMISTOR_CS);
   photocell = analogRead(PHOTOCELL);
+  uptime = (currentTime-initialBootTime)/1000;
 }
